@@ -1,0 +1,15 @@
+=>Javascript execution context
+    - {} => Global execution context(GEC)
+        and GEC is refered as this(stores GEC) keyword
+        In browser this is window object
+
+    - Function Execution Context
+    - Eval Execution Context
+
+
+    - {} => Global execution context(GEC)
+        runs in two phases[Memory creation phase/mermory phase/creation phase[allocate space for variables] , Execution phase]
+
+js is singlethreaded
+
+
