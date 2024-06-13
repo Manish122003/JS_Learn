@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #212121; color: whitesmoke">
+    <ul class="language">
+      <li>JS</li>
+    </ul>
+  </body>
+  <script>
+    function addLang(LangName) {
+      const li = document.createElement("li"); //creating the element
+      li.innerHTML = `${LangName}`; //assigning value to the element
+      document.querySelector(".language").appendChild(li); //adding the elemnt to specific class or parent
+    } //this method traverse whole tree to find the required parent element to it is not efficient
+    addLang("Python");
+    addLang("JAVA");
+    addLang("no");
+    //to make the above fuction we use below method
+    function addLangOpti(LangName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(LangName)); //optimised as we directly create a node and add to the tag but in previous one we access the tree find the location of tag get the value and then overwrite it
+      document.querySelector(".language").appendChild(li);
+    }
+    addLangOpti("c");
+    addLangOpti("c++");
+
+    //Edit
+    const secondLang = document.querySelector('li:nth-child(2)');
+    secondLang.innerHTML = "MOJO";  //Not optimised
+
+    //below we create a new li element and add content to it and replace the previous li with new li
+    const newli = document.createElement('li');
+    newli.textContent = "nojo";
+    secondLang.replaceWith(newli);
+
+    //edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TS</li>'
+
+    //remove
+    const lastLang = document.querySelector('li:last-child');
+    lastLang.remove()
+  </script>
+</html>

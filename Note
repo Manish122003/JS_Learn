@@ -13,3 +13,7 @@
 js is singlethreaded
 
 
+=>queryselector all return nodelist
+=>nodelist is different from list we cannot directyly apply list properties on nodelist
+
+
