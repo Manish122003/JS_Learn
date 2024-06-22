@@ -16,4 +16,7 @@ js is singlethreaded
 =>queryselector all return nodelist
 =>nodelist is different from list we cannot directyly apply list properties on nodelist
 
-
+Promise :-
+- pending : initial state, neither fullfilled not rejected
+- fulfilled : meaning that the operation was compleated successfully
+- rejected : meaning that the operation failed

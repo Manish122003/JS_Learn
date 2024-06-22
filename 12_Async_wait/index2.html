@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async project</title>
+  </head>
+  <body>
+    <h1>Hello js</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const showDate = function(str){
+        console.log(str,Date.now())
+    }
+    function newStart(){
+        var sta = setInterval(showDate,1000,"hii") //to pass the value to the fun we have third para as argument to pass
+    }
+    function newStop(){
+        clearInterval(inter);
+    }
+    document.querySelector('#start').addEventListener('click',function(){newStart()})
+    document.querySelector('#stop').addEventListener('click',function(){})
+    
+  </script>
+</html>

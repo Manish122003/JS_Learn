@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:#121212">
+    <p style="color: antiquewhite;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Ex ratione voluptatum ipsum incidunt nemo, tempora placeat ducimus 
+         maxime rem, inventore consectetur enim, voluptate culpa deleniti? 
+         Soluta animi rem natus quo!</p>
+    
+</body >
+
+<script>
+    const requestUrl = 'https://randomuser.me/api/'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET',requestUrl);
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText)
+            // console.log(typeof data);
+            console.log(data.results);
+        }
+    }
+    xhr.send()
+</script>
+</html>
