@@ -23,7 +23,7 @@ function user1(uname, loginCount,isLogin){
     this.loginCount = loginCount;
     this.isLogin = isLogin;
 
-    return this
+    // return this  // this is implicitely defined by the sytstem we give it or not it will be there 
 
 }
 const uOne =  user1("man","2",true);  //new gives copy of the original and we do out task with that copy or new instance
@@ -31,4 +31,25 @@ const uTwo =  user1("hello","5",false); //but if we dont use new keyword so all 
 const TOne = new user1("man","2",true);  
 console.log(uOne);
 console.log(uTwo);
-console.log(TOne);
+console.log("new line 1");
+console.log(TOne.constructor);
+
+//mechanism of new keyword
+//when we use new keyword an empty objet is created called instance
+//constructor function is called when we use new keyword
+//arguments are injected to the instance
+//the values are returned
+
+// function Car(make, model, year) {
+//     this.make = make;
+//     this.model = model;  
+//     this.year = year;
+//   }
+//   const auto = new Car('Honda', 'Accord', 1998);
+  
+//   console.log(auto instanceof Car);
+//   // Expected output: true
+  
+//   console.log(auto instanceof Object);
+//   // Expected output: true
+  
